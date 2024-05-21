@@ -35,4 +35,5 @@ vars:
 models:
   analytics:
     staging:
+      group: ingestion
       +materialized: view

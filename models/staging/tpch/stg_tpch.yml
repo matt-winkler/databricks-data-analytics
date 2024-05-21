@@ -1,5 +1,11 @@
 version: 2
 
+groups:
+  - name: ingestion
+    owner:
+      name: Data Ingestion Team
+      email: ingest@jaffle.shop
+
 models:
   - name: stg_tpch_customers
     description: staging layer for customers data
