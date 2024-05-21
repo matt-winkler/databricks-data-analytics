@@ -12,7 +12,7 @@ models:
         description: primary key of the model
         constraints:
           - type: not_null
-            type: unique
+          - type: unique
       - name: name
         data_type: string
         description: customer id
