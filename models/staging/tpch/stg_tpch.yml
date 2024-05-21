@@ -3,25 +3,36 @@ version: 2
 models:
   - name: stg_tpch_customers
     description: staging layer for customers data
+    config:
+      contract:
+        enforced: true
     columns:
       - name: customer_key
+        data_type: bigint
         description: primary key of the model
-        tests:
-          - unique
-          - not_null
+        constraints:
+          - type: not_null
+            type: unique
       - name: name
+        data_type: string
         description: customer id
       - name: address
+        data_type: string
         description: address of the customer
       - name: nation_key
+        data_type: bigint
         description: foreign key to stg_tpch_nations
       - name: phone_number
+        data_type: string
         description: phone number of the customer
       - name: account_balance
+        data_type: decimal(18,2)
         description: total account balance from the customer
       - name: market_segment
+        data_type: string
         description: market segment of the customer
       - name: comment
+        data_type: string
         description: '{{ doc("comment") }}'
 
   - name: stg_tpch_line_items
